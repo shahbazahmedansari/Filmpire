@@ -8,13 +8,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Toggle } from "@/components/ui/toggle";
 import Searchbar from "../shared/Searchbar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Theme from "./Theme";
 
 const Navbar = () => {
   return (
-    <nav className="bg-red-500 h-20 flex-between sm:ml-60 items-center gap-5 py-3.5 px-10">
+    <nav className="bg-red-500 h-20 sm:ml-60 items-center gap-5 py-3.5 px-10">
       <div className="flex sm:hidden">
         <Sheet>
           <SheetTrigger className="mx-2">
@@ -34,15 +34,7 @@ const Navbar = () => {
         </Sheet>
       </div>
       <div className="flex justify-between items-center gap-5">
-        <Toggle className="bg-red-500">
-          <Image
-            src="/assets/icons/theme-sun.svg"
-            alt="theme-sun"
-            width={30}
-            height={30}
-          />
-        </Toggle>
-
+        <Theme />
         <Searchbar />
         <Avatar className="cursor-pointer">
           <AvatarImage src="https://github.com/shadcn.png" />
