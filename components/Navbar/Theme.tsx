@@ -21,15 +21,15 @@ const Theme = () => {
             <Image
               src="/assets/icons/theme-sun.svg"
               alt="theme-sun"
-              width={30}
-              height={30}
+              width={40}
+              height={40}
             />
           ) : (
             <Image
               src="/assets/icons/theme-moon.svg"
               alt="theme-moon"
-              width={30}
-              height={30}
+              width={40}
+              height={40}
             />
           )}
         </MenubarTrigger>
@@ -50,7 +50,7 @@ const Theme = () => {
                 }
               }}
             >
-              <Image src={item.icon} alt={item.value} width={20} height={20} />
+              <Image src={item.icon} alt={item.value} width={25} height={25} />
               <p className="gap-3 px-5">{item.label}</p>
             </MenubarItem>
           ))}
