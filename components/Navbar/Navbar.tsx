@@ -3,11 +3,22 @@ import Searchbar from "../shared/Searchbar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Theme from "./Theme";
 import MobileNav from "./MobileNav";
+import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="bg-red-500 h-20 gap-5 py-3.5 px-10">
-      <div className="flex justify-between items-center gap-5 sm:ml-60">
+    <nav className="bg-red-500 h-20 gap-5 flex items-center justify-between w-full fixed z-50 shadow-slate-300">
+      <Link href="/" className="hidden sm:flex">
+        <Image
+          src="/assets/images/logo.png"
+          alt="logo"
+          width={240}
+          height={100}
+          className="bg-white ml-0"
+        />
+      </Link>
+      <div className="flex items-center justify-between gap-5 px-6">
         <MobileNav />
         <Theme />
         <Searchbar />
