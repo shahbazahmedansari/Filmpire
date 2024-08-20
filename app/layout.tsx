@@ -28,10 +28,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ThemeProvider>
-          <Navbar />
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
