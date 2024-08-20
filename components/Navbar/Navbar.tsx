@@ -8,7 +8,10 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="bg-red-500 h-20 gap-5 flex items-center justify-between w-full fixed z-50 shadow-slate-300">
+    <nav
+      className="flex items-center justify-between w-full fixed z-50 gap-5 bg-red-500 h-20 
+    shadow-slate-300 dark:shadow-none dark:bg-slate-900"
+    >
       <Link href="/" className="hidden sm:flex">
         <Image
           src="/assets/images/logo.png"
@@ -18,15 +21,13 @@ const Navbar = () => {
           className="bg-white ml-0"
         />
       </Link>
-      <div className="flex items-center justify-between gap-5 px-6">
-        <MobileNav />
-        <Theme />
-        <Searchbar />
-        <Avatar className="cursor-pointer">
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-      </div>
+      <MobileNav />
+      <Theme />
+      <Searchbar />
+      <Avatar className="cursor-pointer mr-4 sm:mr-12">
+        <AvatarImage src="https://github.com/shadcn.png" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
     </nav>
   );
 };
