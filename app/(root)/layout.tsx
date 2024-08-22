@@ -9,7 +9,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="flex">
         <Sidebar />
         <section className="flex flex-col min-h-screen pt-5 px-6 pb-6">
-          <div className="w-full max-w-5xl mx-auto">{children}</div>
+          <div className="w-full max-w-5xl mx-auto mt-16">{children}</div>
         </section>
       </div>
       Toaster
