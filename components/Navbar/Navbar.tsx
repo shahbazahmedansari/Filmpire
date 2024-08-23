@@ -10,14 +10,14 @@ const Navbar = () => {
   return (
     <nav
       className="flex items-center justify-between w-full fixed z-50 gap-5 bg-red-500 h-20 
-    shadow-slate-300 dark:shadow-none dark:bg-slate-900"
+    shadow-slate-100 dark:shadow-none dark:bg-slate-900"
     >
       <Link href="/" className="hidden sm:flex">
         <Image
           src="/assets/images/logo.png"
           alt="logo"
-          width={240}
-          height={100}
+          width={238}
+          height={120}
           className="bg-white ml-0"
         />
       </Link>
