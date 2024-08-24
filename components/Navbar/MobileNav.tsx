@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  SheetTrigger,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-  Sheet,
-  SheetClose,
-} from "../ui/sheet";
+import { SheetTrigger, SheetContent, Sheet } from "../ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
 
