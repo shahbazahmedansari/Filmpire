@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/Navbar/Navbar";
+import { Provider } from "react-redux";
 import { ThemeProvider } from "@/context/ThemeProvider";
+import store from "@/lib/store";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,7 +29,9 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <Provider store={store}>
+          <ThemeProvider>{children}</ThemeProvider>
+        </Provider>
       </body>
     </html>
   );
