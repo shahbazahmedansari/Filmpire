@@ -4,7 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "@/context/ThemeProvider";
-import store from "@/lib/store";
+// import store from "@/lib/store";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -29,9 +29,9 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Provider store={store}>
+        {/* <Provider store={store}> */}
           <ThemeProvider>{children}</ThemeProvider>
-        </Provider>
+        {/* </Provider> */}
       </body>
     </html>
   );

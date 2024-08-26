@@ -1,4 +1,3 @@
-"use client";
 import Navbar from "@/components/Navbar/Navbar";
 import Sidebar from "@/components/shared/Sidebar";
 import React from "react";
