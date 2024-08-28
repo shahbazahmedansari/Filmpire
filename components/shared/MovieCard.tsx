@@ -22,7 +22,7 @@ const MovieCard = ({ key, index, movie }: MovieCardProps) => {
           href={`/movie/${movie.id}`}
           className="items-center max-sm:flex max-sm:flex-col"
         >
-          {/* <Image
+          <Image
             src={
               movie.poster_path
                 ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
@@ -31,10 +31,11 @@ const MovieCard = ({ key, index, movie }: MovieCardProps) => {
             alt={movie.title}
             width={200}
             height={300}
-            className="rounded-xl mb-3 hover:scale-105"
-          /> */}
+            className="rounded-xl mb-3 hover:scale-90 hover:rounded-xl
+            hover:transition hover:duration-150 hover:ease-out hover:cursor-pointer"
+          />
         </Link>
-        {movie.title}
+        <p className="text-center mr-10">{movie.title}</p>
       </div>
     </div>
   );
