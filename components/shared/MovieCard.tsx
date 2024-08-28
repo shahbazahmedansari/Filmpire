@@ -34,8 +34,8 @@ const MovieCard = ({ key, index, movie }: MovieCardProps) => {
             className="rounded-xl mb-3 hover:scale-90 hover:rounded-xl
             hover:transition hover:duration-150 hover:ease-out hover:cursor-pointer"
           />
+          <p className="text-center mr-10">{movie.title}</p>
         </Link>
-        <p className="text-center mr-10">{movie.title}</p>
       </div>
     </div>
   );
