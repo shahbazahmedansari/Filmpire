@@ -14,10 +14,10 @@ const Sidebar = async () => {
   const genreData = await getGenres();
   return (
     <section
-      className="w-[240px] min-h-screen hidden sm:flex overflow-scroll mt-20 
+      className="w-[240px] min-h-screen hidden sm:flex mt-20 
     justify-center border-r-2"
     >
-      <div className="flex flex-col w-full overflow-scroll">
+      <div className="flex flex-col w-full overflow-y-scroll">
         <div className="border-t-2 border-slate-300 border-solid w-full"></div>
         <div className="flex justify-start text-slate-700 m-3">
           <h1>Categories</h1>
