@@ -1,9 +1,8 @@
 import MovieList from "@/components/shared/MovieList";
-import { getTopRatedMovies } from "@/lib/actions";
+import { getMovies } from "@/lib/actions";
 
 export default async function Home() {
-  const topRatedMovies = await getTopRatedMovies();
-  console.log(topRatedMovies);
+  const topRatedMovies = await getMovies();
   return (
     <div>
       <MovieList movies={topRatedMovies} />

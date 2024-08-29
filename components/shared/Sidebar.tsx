@@ -1,3 +1,4 @@
+import { getGenres } from "@/lib/actions";
 import React from "react";
 
 const categories = [
@@ -16,7 +17,9 @@ const demoCategories = [
   "Thriller",
 ];
 
-const Sidebar = () => {
+const Sidebar = async () => {
+  const genreData = await getGenres();
+  console.log(genreData.genres);
   return (
     <section
       className="w-[240px] min-h-screen hidden sm:flex overflow-y-scroll mt-20 
@@ -36,8 +39,10 @@ const Sidebar = () => {
         <div className="flex justify-start text-slate-700 m-3">
           <h1>Genres</h1>
         </div>
-        {demoCategories.map((item) => (
-          <div key={item} className="m-3">{item}</div>
+        {genreData.genres.map((item: { name: string; id: number }) => (
+          <div key={item.id} className="m-3">
+            {item.name}
+          </div>
         ))}
       </div>
     </section>
