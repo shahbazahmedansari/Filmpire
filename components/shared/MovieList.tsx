@@ -16,7 +16,7 @@ const MovieList = ({ movies }: MovieProps) => {
       max-sm:justify-center gap-4 p-4"
       >
         {movies.results.map((movie: Object, index: number) => (
-          <MovieCard key={index} index={index} movie={movie} />
+          <MovieCard key={index} movie={movie} />
         ))}
       </div>
     </div>

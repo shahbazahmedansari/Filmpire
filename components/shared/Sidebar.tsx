@@ -3,12 +3,7 @@ import React from "react";
 import genreIcons from "../../public/assets/genres";
 import Link from "next/link";
 import Image from "next/image";
-
-const categories = [
-  { label: "Popular", value: "popular" },
-  { label: "Top Rated", value: "top-rated" },
-  { label: "Upcoming", value: "upcoming" },
-];
+import { categories } from "@/constants";
 
 const Sidebar = async () => {
   const genreData = await getGenres();
@@ -19,11 +14,11 @@ const Sidebar = async () => {
     >
       <div className="flex flex-col w-full overflow-y-scroll">
         <div className="border-t-2 border-slate-300 border-solid w-full"></div>
-        <div className="flex justify-start text-slate-700 m-3">
+        <div className="flex justify-start text-slate-700 m-3 dark:text-white">
           <h1>Categories</h1>
         </div>
         {categories.map((item: { label: string; value: string }) => (
-          <Link href={"/"} key={item.label}>
+          <Link href={`/${item.value}`} key={item.label}>
             <div className="m-3 flex items-center">
               <Image
                 // @ts-ignore
@@ -39,7 +34,7 @@ const Sidebar = async () => {
           </Link>
         ))}
         <div className="border-t-2 border-slate-300 border-solid w-full"></div>
-        <div className="flex justify-start text-slate-700 m-3">
+        <div className="flex justify-start text-slate-700 m-3 dark:text-white">
           <h1>Genres</h1>
         </div>
         {genreData.genres.map((item: { name: string; id: number }) => (

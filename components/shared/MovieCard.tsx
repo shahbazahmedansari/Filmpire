@@ -4,11 +4,10 @@ import React from "react";
 
 interface MovieCardProps {
   key: number;
-  index: number;
   movie: any;
 }
 
-const MovieCard = ({ key, index, movie }: MovieCardProps) => {
+const MovieCard = ({ key, movie }: MovieCardProps) => {
   return (
     <div
       className="text-slate-900 font-bold
@@ -34,7 +33,7 @@ const MovieCard = ({ key, index, movie }: MovieCardProps) => {
             className="rounded-xl mb-3 hover:scale-90 hover:rounded-xl
             hover:transition hover:duration-150 hover:ease-out hover:cursor-pointer"
           />
-          <p className="text-center mr-10">{movie.title}</p>
+          <p className="text-center mr-10 dark:text-white">{movie.title}</p>
         </Link>
       </div>
     </div>

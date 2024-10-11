@@ -12,6 +12,9 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "Filmpire",
   description: "A movie search application",
+  icons: {
+    icon: "/public/assets/images/logo.png",
+  },
 };
 
 export default function RootLayout({
