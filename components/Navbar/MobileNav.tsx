@@ -4,12 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getGenres } from "@/lib/actions";
 import genreIcons from "../../public/assets/genres";
-
-const categories = [
-  { label: "Popular", value: "popular" },
-  { label: "Top Rated", value: "top-rated" },
-  { label: "Upcoming", value: "upcoming" },
-];
+import { categories } from "@/constants";
 
 const MobileNav = async () => {
   const genreData = await getGenres();
@@ -45,7 +40,7 @@ const MobileNav = async () => {
                 <h1>Categories</h1>
               </div>
               {categories.map((item: { label: string; value: string }) => (
-                <Link href={"/"} key={item.label}>
+                <Link href={`/${item.value}`} key={item.label}>
                   <div className="m-3 flex items-center">
                     <Image
                       // @ts-ignore

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+// React Server Components
+import * as motion from "framer-motion/client";
 
 interface MovieCardProps {
   key: number;
@@ -11,9 +13,9 @@ const MovieCard = ({ key, movie }: MovieCardProps) => {
   return (
     <div
       className="text-slate-900 font-bold
-    mt-3 mb-0 text-center overflow-hidden sm:text-ellipsis w-60 whitespace-nowrap"
+    mt-3 mb-0 text-center overflow-hidden sm:text-ellipsis w-60 whitespace-nowrap 2xl:px-10"
     >
-      <div
+      <motion.div
         className="flex-grow hover:transition hover:duration-150 hover:ease-out hover:cursor-pointer"
         key={key}
       >
@@ -35,7 +37,7 @@ const MovieCard = ({ key, movie }: MovieCardProps) => {
           />
           <p className="text-center mr-10 dark:text-white">{movie.title}</p>
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };
