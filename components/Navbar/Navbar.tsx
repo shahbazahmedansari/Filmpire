@@ -3,8 +3,7 @@ import Searchbar from "../shared/Searchbar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Theme from "./Theme";
 import MobileNav from "./MobileNav";
-import Link from "next/link";
-import Image from "next/image";
+import Logo from "../shared/Logo";
 
 const Navbar = () => {
   return (
@@ -12,15 +11,7 @@ const Navbar = () => {
       className="flex items-center justify-between w-full fixed z-50 gap-5 bg-red-500 h-20 
     shadow-slate-100 dark:shadow-none dark:bg-slate-900"
     >
-      <Link href="/" className="hidden sm:flex">
-        <Image
-          src="/assets/images/logo.png"
-          alt="logo"
-          width={238}
-          height={120}
-          className="bg-white ml-0"
-        />
-      </Link>
+      <Logo />
       <MobileNav />
       <Theme />
       <Searchbar />

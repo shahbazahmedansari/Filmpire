@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Filmpire",
   description: "A movie search application",
   icons: {
-    icon: "/public/assets/images/logo.png",
+    icon: "/assets/icons/film2.webp",
   },
 };
 
