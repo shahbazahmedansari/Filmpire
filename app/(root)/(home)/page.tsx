@@ -1,11 +1,11 @@
 import MovieList from "@/components/shared/MovieList";
-import { getMovies } from "@/lib/actions";
+import { getNowPlayingMovies } from "@/lib/actions";
 
 export default async function Home() {
-  const topRatedMovies = await getMovies();
+  const nowPlayingMovies = await getNowPlayingMovies();
   return (
     <div className="flex justify-center items-center flex-wrap max-w-full">
-      <MovieList movies={topRatedMovies} />
+      <MovieList movies={nowPlayingMovies} />
     </div>
   );
 }

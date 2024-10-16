@@ -10,16 +10,16 @@ const Sidebar = async () => {
   return (
     <section
       className="w-[240px] min-h-screen hidden sm:flex mt-20 
-    justify-center border-r-2"
+    justify-center border-r-2 sticky left-0 top-0 overflow-y-auto h-screen custom-scrollbar"
     >
-      <div className="flex flex-col w-full overflow-y-scroll">
+      <div className="flex flex-col w-full">
         <div className="border-t-2 border-slate-300 border-solid w-full"></div>
         <div className="flex justify-start text-slate-700 m-3 dark:text-white">
           <h1>Categories</h1>
         </div>
         {categories.map((item: { label: string; value: string }) => (
           <Link href={`/${item.value}`} key={item.label}>
-            <div className="m-3 flex items-center">
+            <div className="p-3 flex items-center hover:bg-stone-400 hover:dark:bg-slate-500">
               <Image
                 // @ts-ignore
                 src={genreIcons[item.label.toLowerCase()]}
@@ -38,8 +38,8 @@ const Sidebar = async () => {
           <h1>Genres</h1>
         </div>
         {genreData.genres.map((item: { name: string; id: number }) => (
-          <Link key={item.id} href="/">
-            <div className="m-3 flex items-center">
+          <Link key={item.id} href={`/${item.name}`}>
+            <div className="p-3 flex items-center hover:bg-stone-400 hover:dark:bg-slate-500">
               <Image
                 // @ts-ignore
                 src={genreIcons[item.name.toLowerCase()]}
